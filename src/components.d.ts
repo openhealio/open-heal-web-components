@@ -20,6 +20,8 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface TailwindExampleComponent {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +30,15 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLTailwindExampleComponentElement extends Components.TailwindExampleComponent, HTMLStencilElement {
+    }
+    var HTMLTailwindExampleComponentElement: {
+        prototype: HTMLTailwindExampleComponentElement;
+        new (): HTMLTailwindExampleComponentElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "tailwind-example-component": HTMLTailwindExampleComponentElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +56,11 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface TailwindExampleComponent {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "tailwind-example-component": TailwindExampleComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +68,7 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "tailwind-example-component": LocalJSX.TailwindExampleComponent & JSXBase.HTMLAttributes<HTMLTailwindExampleComponentElement>;
         }
     }
 }
