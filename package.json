@@ -1,8 +1,8 @@
 {
   "name": "open-heal-web-components",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Stencil Component Starter",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",
   "es2017": "dist/esm/index.mjs",
@@ -15,7 +15,8 @@
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
   },
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
