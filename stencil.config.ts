@@ -4,7 +4,7 @@ import { sass } from '@stencil/sass';
 import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
-  namespace: 'open-heal-web-components',
+  namespace: 'open-heal-components',
   plugins: [
     tailwind(),
     tailwindHMR(),
@@ -19,6 +19,7 @@ export const config: Config = {
     },
     {
       type: 'dist-custom-elements',
+      generateTypeDeclarations: true,
     },
     {
       type: 'docs-readme',
@@ -28,8 +29,8 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: 'open-heal-web-components',
-      proxiesFile: '../../generated/open-heal-web-components-react/src/components.ts',
+      componentCorePackage: 'open-heal-components',
+      proxiesFile: '_react-components/index.ts',
     }),
   ],
 };

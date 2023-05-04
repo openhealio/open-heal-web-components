@@ -1,18 +1,18 @@
 import { newSpecPage } from '@stencil/core/testing';
-import { TailwindExample } from '../tailwind-example';
+import { LinkButton } from '../link-button';
 
-describe('tailwind-example', () => {
+describe('link-button', () => {
   it('renders', async () => {
     const page = await newSpecPage({
-      components: [TailwindExample],
-      html: `<tailwind-example></tailwind-example>`,
+      components: [LinkButton],
+      html: `<link-button></link-button>`,
     });
     expect(page.root).toEqualHtml(`
-      <tailwind-example>
+      <link-button>
         <mock:shadow-root>
           <slot></slot>
         </mock:shadow-root>
-      </tailwind-example>
+      </link-button>
     `);
   });
 });

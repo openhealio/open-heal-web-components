@@ -5,70 +5,37 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { LinkButtonType } from "./components/link-button/link-button";
+export { LinkButtonType } from "./components/link-button/link-button";
 export namespace Components {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
-    interface TailwindExampleComponent {
+    interface LinkButton {
+        "color": LinkButtonType;
     }
 }
 declare global {
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
+    interface HTMLLinkButtonElement extends Components.LinkButton, HTMLStencilElement {
     }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
-    interface HTMLTailwindExampleComponentElement extends Components.TailwindExampleComponent, HTMLStencilElement {
-    }
-    var HTMLTailwindExampleComponentElement: {
-        prototype: HTMLTailwindExampleComponentElement;
-        new (): HTMLTailwindExampleComponentElement;
+    var HTMLLinkButtonElement: {
+        prototype: HTMLLinkButtonElement;
+        new (): HTMLLinkButtonElement;
     };
     interface HTMLElementTagNameMap {
-        "my-component": HTMLMyComponentElement;
-        "tailwind-example-component": HTMLTailwindExampleComponentElement;
+        "link-button": HTMLLinkButtonElement;
     }
 }
 declare namespace LocalJSX {
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
-    interface TailwindExampleComponent {
+    interface LinkButton {
+        "color"?: LinkButtonType;
     }
     interface IntrinsicElements {
-        "my-component": MyComponent;
-        "tailwind-example-component": TailwindExampleComponent;
+        "link-button": LinkButton;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
-            "tailwind-example-component": LocalJSX.TailwindExampleComponent & JSXBase.HTMLAttributes<HTMLTailwindExampleComponentElement>;
+            "link-button": LocalJSX.LinkButton & JSXBase.HTMLAttributes<HTMLLinkButtonElement>;
         }
     }
 }

@@ -1,0 +1,19 @@
+:host {
+  display: block;
+
+  span {
+    padding: 0.4rem 1.5rem;
+    font-size: 0.875rem;
+    border-radius: 1rem;
+
+    &.primary-color {
+      background-color: $primaryColor;
+      color: $secondaryColor;
+    }
+
+    &.secondary-color {
+      background-color: $secondaryColor;
+      color: $primaryColor;
+    }
+  }
+}
