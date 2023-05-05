@@ -1,7 +1,7 @@
 dist/
 www/
 loader/
-_react-components/
+react-components/
 
 *~
 *.sw[mnpcod]

@@ -1,28 +1,24 @@
 {
   "compilerOptions": {
-    "module": "esnext",
-    "target": "es2017",
-    "noImplicitAny": false,
-    "removeComments": true,
-    "noLib": false,
-    "emitDecoratorMetadata": true,
-    "noUnusedLocals": true,
     "allowSyntheticDefaultImports": true,
     "allowUnreachableCode": false,
     "declaration": false,
     "experimentalDecorators": true,
+    "skipLibCheck": true,
     "lib": [
       "dom",
       "es2017"
     ],
     "moduleResolution": "node",
+    "module": "esnext",
+    "target": "es2017",
+    "noUnusedLocals": true,
     "noUnusedParameters": true,
     "jsx": "react",
     "jsxFactory": "h"
   },
   "include": [
-    "src",
-    "loader",
+    "src"
   ],
   "exclude": [
     "node_modules"

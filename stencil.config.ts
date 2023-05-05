@@ -30,7 +30,7 @@ export const config: Config = {
     },
     reactOutputTarget({
       componentCorePackage: 'open-heal-components',
-      proxiesFile: '_react-components/index.ts',
+      proxiesFile: 'react-components/index.ts',
     }),
   ],
 };
