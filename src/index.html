@@ -5,12 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0" />
     <title>Stencil Component Starter</title>
 
+    <link rel="stylesheet" href="/build/open-heal-components.css" />
     <script type="module" src="/build/open-heal-components.esm.js"></script>
     <script nomodule src="/build/open-heal-components.js"></script>
   </head>
-  <body>
-    <link-button color="secondary">
-      Saiba mais
-    </link-button>
+  <body class="flex flex-col items-center">
+    <h1 class="text-4xl text-gray-900 mt-4 mb-4">Open Heal Web Components</h1>
+    <h2 class="text-base mb-2 text-center">
+      Rode
+      <code class="italic font-bold">$ yarn storybook-stencil-build</code> <br />
+      e acesse:
+      <a class="underline " href="http://localhsot:6006">localhost:6006</a><br />
+      para ver acessar a biblioteca de componentes
+    </h2>
   </body>
 </html>

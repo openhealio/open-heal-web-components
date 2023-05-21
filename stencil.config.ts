@@ -5,6 +5,7 @@ import { reactOutputTarget } from '@stencil/react-output-target';
 
 export const config: Config = {
   namespace: 'open-heal-components',
+  globalStyle: 'www/tailwind.css',
   plugins: [
     tailwind(),
     tailwindHMR(),
