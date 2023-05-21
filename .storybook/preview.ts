@@ -1,5 +1,6 @@
 import type { Preview } from '@storybook/react';
 import { defineCustomElements } from '../loader';
+import '../src/index.css';
 
 defineCustomElements();
 
